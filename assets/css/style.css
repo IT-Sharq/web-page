@@ -1,0 +1,34 @@
+.more-posts {
+  margin-left: auto;
+  margin-right: auto;
+  width: 15rem;
+  line-height: 1;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  text-align: center; /* Выравнивание текста по центру */
+  background-color: #a4c639;
+  color: #fff;
+  justify-content: center; /* Горизонтальное выравнивание по центру */
+
+  padding: 10px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+
+}
+
+.more-posts:hover {
+  background-color: #45a049;
+  
+}
+
+.more-posts a {
+  color: #fff;
+}
+
+
+
+
+.post_name a{
+	color: black;
+}
+

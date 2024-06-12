@@ -1,0 +1,29 @@
+.navbar .navbar-nav a.nav-link {
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    color: black;
+    transition: all 0.5s;
+    margin-top: 5px;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+
+.sharq_name{
+    color:green;
+}
+
+
+.blog-navbar{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.089); /* Тень: смещение по горизонтали, смещение по вертикали, размытие, цвет */
+}
+
+.post_k{
+    margin-top: 20px;
+}

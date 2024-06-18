@@ -1,12 +1,9 @@
 const path = require('path');
 const fs = require('fs');
-
 const express = require('express');
 const app = express();
-
 const sequelize = require('./db/db');
 const PostModel = require('./db/models/post.model');
-
 const { Telegraf, Markup, Stage } = require('telegraf');
 const session = require('telegraf/session');
 const bot = new Telegraf(process.env.BOT_TOKEN);
@@ -29,13 +26,8 @@ bot.use(stage.middleware());
 scenesButtons.forEach((rpl) => stage.register(rpl));
 bot.start(async (ctx) => ctx.reply('Welcome1', meny()));
 bot.help((ctx) => ctx.reply('Send me a sticker'));
-console.log(stage);
-routersBot.forEach(({ routs }) => {
-  for (let [uri, fn] of Object.entries(routs)) {
-    bot.hears(uri, fn);
-  }
-});
 
+routersBot.forEach(({ routs }) => for (let [uri, fn] of Object.entries(routs)) bot.hears(uri, fn));
 const start = async () => {
   try {
     await sequelize.authenticate();
@@ -52,10 +44,9 @@ const start = async () => {
     app.listen(PORT, () => {
       console.log(`Сервер запущен на порту ${PORT}`);
     });
-
     await bot.startPolling();
   } catch (error) {
-    console.log('Ошибка Index.js', error);
+    console.error(error.message);
   }
 };
 start();

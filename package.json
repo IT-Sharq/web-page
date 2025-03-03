@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "express": "^4.21.2",
-    "pg": "^8.13.1",
+    "pg": "^8.13.3",
     "pg-connection-string": "^2.7.0",
     "sequelize": "^6.37.5",
     "telegraf": "^4.16.3"
